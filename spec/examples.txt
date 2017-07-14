@@ -1,6 +1,6 @@
 example_id                        | status | run_time        |
 --------------------------------- | ------ | --------------- |
-./spec/models/role_spec.rb[1:1:1] | passed | 0.00425 seconds |
-./spec/models/role_spec.rb[1:1:2] | passed | 0.03013 seconds |
-./spec/models/user_spec.rb[1:1:1] | passed | 0.004 seconds   |
-./spec/models/user_spec.rb[1:1:2] | passed | 0.03081 seconds |
+./spec/models/role_spec.rb[1:1:1] | passed | 0.01907 seconds |
+./spec/models/role_spec.rb[1:1:2] | passed | 0.0158 seconds  |
+./spec/models/user_spec.rb[1:1:1] | passed | 0.00362 seconds |
+./spec/models/user_spec.rb[1:1:2] | passed | 0.02137 seconds |
