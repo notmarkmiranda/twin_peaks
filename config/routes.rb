@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy', as: 'logout'
 
-  get '/dashboard', to: 'dahboard#show', as: 'dashboard'
+  get '/dashboard', to: 'dashboard#show', as: 'dashboard'
 end
