@@ -1,15 +1,15 @@
 example_id                             | status | run_time        |
 -------------------------------------- | ------ | --------------- |
-./spec/models/role_spec.rb[1:1:1]      | passed | 0.0101 seconds  |
-./spec/models/role_spec.rb[1:1:2]      | passed | 0.05018 seconds |
-./spec/models/role_spec.rb[1:2:1]      | passed | 0.00391 seconds |
-./spec/models/role_spec.rb[1:2:2]      | passed | 0.01425 seconds |
-./spec/models/user_role_spec.rb[1:1:1] | passed | 0.0606 seconds  |
-./spec/models/user_role_spec.rb[1:1:2] | passed | 0.02776 seconds |
-./spec/models/user_role_spec.rb[1:1:3] | passed | 0.05762 seconds |
-./spec/models/user_role_spec.rb[1:2:1] | passed | 0.01003 seconds |
-./spec/models/user_role_spec.rb[1:2:2] | passed | 0.00202 seconds |
-./spec/models/user_spec.rb[1:1:1]      | passed | 0.00408 seconds |
-./spec/models/user_spec.rb[1:1:2]      | passed | 0.01926 seconds |
-./spec/models/user_spec.rb[1:2:1]      | passed | 0.0037 seconds  |
-./spec/models/user_spec.rb[1:2:2]      | passed | 0.00541 seconds |
+./spec/models/role_spec.rb[1:1:1]      | passed | 0.00578 seconds |
+./spec/models/role_spec.rb[1:1:2]      | passed | 0.03035 seconds |
+./spec/models/role_spec.rb[1:2:1]      | passed | 0.0037 seconds  |
+./spec/models/role_spec.rb[1:2:2]      | passed | 0.0024 seconds  |
+./spec/models/user_role_spec.rb[1:1:1] | passed | 0.02431 seconds |
+./spec/models/user_role_spec.rb[1:1:2] | passed | 0.02645 seconds |
+./spec/models/user_role_spec.rb[1:1:3] | passed | 0.10421 seconds |
+./spec/models/user_role_spec.rb[1:2:1] | passed | 0.00193 seconds |
+./spec/models/user_role_spec.rb[1:2:2] | passed | 0.01085 seconds |
+./spec/models/user_spec.rb[1:1:1]      | passed | 0.00982 seconds |
+./spec/models/user_spec.rb[1:1:2]      | passed | 0.02438 seconds |
+./spec/models/user_spec.rb[1:2:1]      | passed | 0.00349 seconds |
+./spec/models/user_spec.rb[1:2:2]      | passed | 0.00491 seconds |
