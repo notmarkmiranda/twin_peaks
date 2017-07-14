@@ -1,3 +1,9 @@
+admin = Role.create!(title: 'Admin')
+u = User.create!(login: '07141206', password: 'password')
+puts "#{u.login} created!"
+
+
+# testing identifiers, remove before submitting to prod
 pi = Role.create!(title: 'Primary Investigator')
 cc = Role.create!(title: 'Coordinator')
 pa = Role.create!(title: 'Patient')
