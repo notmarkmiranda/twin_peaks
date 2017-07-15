@@ -11,17 +11,17 @@ RSpec.describe SessionsController, type: :controller do
   context "POST#create" do
     before { @user = create(:user) }
     it "with valid username / password, redirection" do
-      post :create, params: { login: @user.login, password: 'password' }
+      post :create, params: { session: { login: @user.login, password: 'password' } }
       expect(response).to redirect_to dashboard_path
     end
 
     it "with invalid username" do
-      post :create, params: { login: "#{@user.login}a", password: 'password' }
+      post :create, params: { session: { login: "#{@user.login}a", password: 'password' } }
       expect(response).to render_template :new
     end
 
     it "with invalid password" do
-      post :create, params: { login: @user.login, password: 'paszwordz' }
+      post :create, params: { session:  { login: @user.login, password: 'paszwordz' } }
       expect(response).to render_template :new
     end
   end
