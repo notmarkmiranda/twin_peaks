@@ -3,9 +3,7 @@ require 'rails_helper'
 RSpec.describe UsersController, type: :controller do
   context "admin can trigger actions" do
     before do
-     role = create(:role, title: "Admin")
-     ur = create(:user_role, role: role)
-     admin = ur.user
+      admin = create(:admin)
      allow_any_instance_of(ApplicationController).to receive(:current_user)
        .and_return(admin)
     end
@@ -30,9 +28,7 @@ RSpec.describe UsersController, type: :controller do
 
   context "non-admin gets redirect" do
     before do
-      role = create(:role, title: "Coordinator")
-      ur = create(:user_role, role: role)
-      coordinator = ur.user
+      coordinator = create(:coordinator)
       allow_any_instance_of(ApplicationController).to receive(:current_user)
         .and_return(coordinator)
     end
