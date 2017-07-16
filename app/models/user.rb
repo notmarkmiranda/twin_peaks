@@ -1,6 +1,12 @@
 # :nodoc:
+require 'role_model'
+
 class User < ApplicationRecord
   has_secure_password
+  include RoleModel
+
+  roles :admin, :pi, :coordinator
+
   validates :login, presence: true, uniqueness: true
 
   has_many :user_roles
