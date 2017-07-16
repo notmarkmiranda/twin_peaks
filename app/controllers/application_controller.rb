@@ -10,6 +10,6 @@ class ApplicationController < ActionController::Base
   end
 
   def require_admin
-    redirect_to not_found_path unless current_user && current_user.admin?
+    redirect_to not_found_path unless current_user && current_user.is_admin?
   end
 end
