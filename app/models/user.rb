@@ -5,7 +5,7 @@ class User < ApplicationRecord
   has_secure_password
   include RoleModel
 
-  roles :admin, :primary_investigator, :coordinator
+  roles %i(admin primary_investigator coordinator).freeze
 
   validates :login, presence: true, uniqueness: true
 
