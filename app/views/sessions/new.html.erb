@@ -1,7 +1,31 @@
-<%= form_for :session, url: login_path do |f| %>
-  <%= f.label :login %>
-  <%= f.text_field :login %>
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-  <%= f.submit "Log In" %>
-<% end %>
+<div class="container login-container">
+  <div class="col-md-4 col-md-offset-4">
+    <div class="panel panel-default">
+      <div class="panel-heading"><h3 class="panel-title"><strong>Sign in </strong></h3>
+        <div class="forgot-password"><a href="#">Forgot password?</a></div>
+      </div>
+      <div class="panel-body">
+        <%= form_for :session, url: login_path do |f| %>
+          <div class="input-group sign-in-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <%= f.text_field :login, class: "form-control", placeholder: "login", autofocus: true %>
+          </div>
+          <div class="input-group sign-in-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+            <%= f.password_field :password, class: "form-control", placeholder: "password" %>
+          </div>
+          <%= f.submit "Sign in", class: "btn btn-default" %>
+          <hr class="sign-in-hr">
+          <div class="form-group">
+            <div class="sign-up-text">
+              Don't have an account!
+              <a href="#" onClick="$('#loginbox').hide(); $('#signupbox').show()">
+                Sign Up Here
+              </a>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
