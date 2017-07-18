@@ -10,7 +10,6 @@ RSpec.describe UsersController, type: :controller do
 
     it 'GET#new' do
       get :new
-      expect(assigns[:user]).to be_a_new(User)
       expect(response).to render_template :new
     end
 
@@ -23,6 +22,24 @@ RSpec.describe UsersController, type: :controller do
     it 'POST#create - sad template' do
       post :create, params: { user: { password: 'password' } }
       expect(response).to render_template :new
+    end
+
+    it 'GET#edit' do
+      user = create(:user)
+      get :edit, params: { id: user.id }
+      expect(response).to render_template :edit
+    end
+
+    it 'PATCH#update - happy template' do
+      user = create(:user)
+      patch :update, params: { id: user.id, user: { login: 'asdf', password: 'asdf' } }
+      expect(response).to redirect_to user_path(user)
+    end
+
+    it 'PATCH#update - sad template' do
+      user = create(:user)
+      patch :update, params: { id: user.id, user: { login: '' } }
+      expect(response).to render_template :edit
     end
   end
 
