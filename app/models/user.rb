@@ -4,6 +4,7 @@ require 'role_model'
 class User < ApplicationRecord
   has_secure_password
   include RoleModel
+  has_many :studies, class_name: 'Study', foreign_key: 'creator_id'
 
   ROLES = %i(admin primary_investigator coordinator).freeze
   roles ROLES
