@@ -1,6 +1,6 @@
 class Study < ApplicationRecord
 # status enum - pending, enrolling, active, follow up, closed
-  validates_presence_of :type
+  validates_presence_of :study_type
   validates_presence_of :name
   validates_presence_of :status
   validates :protocol_number, presence: true, uniqueness: true

@@ -1,9 +1,9 @@
 FactoryGirl.define do
   factory :study do
-    type 0
+    study_type 0
     sequence :name { |n| "study name #{n}" }
-    status 0
+    status :pending
     sequence :protocol_number { |n| "123456#{n}" }
-    creator
+    creator user
   end
 end

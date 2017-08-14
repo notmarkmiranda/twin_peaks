@@ -10,18 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170718182447) do
+ActiveRecord::Schema.define(version: 20170814184028) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "studies", force: :cascade do |t|
-    t.integer "type"
     t.string "name"
     t.string "alias"
     t.integer "status", default: 0
     t.string "protocol_number"
     t.integer "creator_id"
+    t.integer "study_type"
     t.index ["creator_id"], name: "index_studies_on_creator_id"
   end
 

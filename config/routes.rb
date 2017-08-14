@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     patch '/deactivate', to: 'users/deactivate#update'
     patch '/activate', to: 'users/activate#update'
   end
+  resources :studies
   get '/login', to: 'sessions#new', as: 'login'
   post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy', as: 'logout'
