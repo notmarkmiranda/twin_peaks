@@ -1,0 +1,31 @@
+<div class="container">
+  <table class="table table-striped table-condensed table-responsive">
+    <tr>
+      <th>#</th>
+      <th>Login</th>
+      <th>Roles</th>
+      <th>Last Login</th>
+      <th>Actions</th>
+    </tr>
+    <% @users.each_with_index do |user, index| %>
+      <tr>
+        <td><%= index + 1 %></td>
+        <td><%= user.login %></td>
+        <td>
+          <% user.roles.each do |role| %>
+            <%= role.to_s.humanize %><br />
+          <% end %>
+        </td>
+        <td>yup</td>
+        <td>
+          <%= link_to "Edit User", edit_user_path(user), class: 'btn btn-sm btn-default' %>
+          <% if user.active %>
+            <%= button_to 'Deactivate', user_deactivate_path(user), method: :patch, class: 'btn btn-sm btn-danger' %>
+          <% else %>
+            <%= button_to "Activate", user_activate_path(user), method: :patch, class: 'btn btn-sm btn-success' %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</div>

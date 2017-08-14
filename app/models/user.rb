@@ -10,4 +10,17 @@ class User < ApplicationRecord
 
   validates :login, presence: true, uniqueness: true
 
+  def activate
+    return if active
+    update(active: true)
+  end
+
+  def active_status
+    active ? 'Active' : 'Inactive'
+  end
+
+  def deactivate
+    return if !active
+    update(active: false)
+  end
 end

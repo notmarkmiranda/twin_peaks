@@ -1,0 +1,25 @@
+<div class="container text-center">
+  <div class="user-header">
+    <%= @user.login %>
+  </div>
+  <div class="user-status">
+    <%= @user.active_status %>
+  </div>
+  <div class="user-roles">
+    <div class="title">roles:</div>
+    <% present(@user) do |user| %>
+      <% @user.roles.each do |role| %>
+        <span class="label label-<%= user.role_css_class(role) %>">
+          <%= role.to_s.humanize %>
+        </span>
+      <% end %>
+    <% end %>
+    <hr>
+    <%= link_to "Edit User", edit_user_path(@user), class: 'btn btn-default' %>
+    <% if @user.active == false %>
+      <%= button_to "Activate User", user_activate_path(@user), method: :patch, class: 'btn btn-success' %>
+    <% else %>
+      <%= button_to 'Deactivate User', user_deactivate_path(@user), method: :patch, class: 'btn btn-danger' %>
+    <% end %>
+  </div>
+</div>

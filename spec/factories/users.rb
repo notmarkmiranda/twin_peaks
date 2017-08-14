@@ -2,6 +2,7 @@ FactoryGirl.define do
   factory :user do
     sequence :login { |n| "12345#{n}" }
     password 'password'
+    active true
     roles [ 'primary_investigator']
 
     factory :admin do
